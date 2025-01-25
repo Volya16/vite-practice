@@ -69,6 +69,9 @@ const dateTime = document.querySelector('.date span');
 
 dateTime.textContent = new Date().toLocaleString();
 
+console.log(new Date());
+console.log(new Date().toLocaleString());
+
 setInterval(() => {
   dateTime.textContent = new Date().toLocaleString();
 }, 1000);
@@ -76,19 +79,19 @@ setInterval(() => {
 // Перероби функцію на проміс таким чином, щоб проміс повертав значення
 // через 2 секунди після виклику функції
 
-function greet() {
-  return 'hello world';
-}
+// function greet() {
+//   return 'hello world';
+// }
 
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('hello world');
-  }, 2000);
-});
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('hello world');
+//   }, 2000);
+// });
 
-promise.then(response => {
-  //   console.log(response);
-});
+// promise.then(response => {
+//     console.log(response);
+// });
 
 // - Використовуй prompt та повертай значення звідти.
 // - Створи функцію, яка буде набувати значення з prompt і повертатиме проміс.
@@ -103,45 +106,48 @@ promise.then(response => {
 //   })
 //   .catch(err => console.log(err));
 
-function fun(data) {
-  return new Promise((res, rej) => {
-    if (Number.isNaN(Number(data))) {
-      rej('error');
-    } else if (data % 2 === 0) {
-      setTimeout(() => {
-        res('even');
-      }, 1000);
-    } else {
-      setTimeout(() => {
-        res('odd');
-      }, 2000);
-    }
-  });
-}
+// function fun(data) {
+//   return new Promise((res, rej) => {
+//     if (Number.isNaN(Number(data))) {
+//       rej('error');
+//     } else if (data % 2 === 0) {
+//       setTimeout(() => {
+//         res('even');
+//       }, 1000);
+//     } else {
+//       setTimeout(() => {
+//         res('odd');
+//       }, 2000);
+//     }
+//   });
+// }
 
-// Напишіть функцію calculateAge(birthDate), яка приймає дату народження у форматі YYYY-MM-DD і повертає поточний вік.
-// Підказка: Використайте об'єкт Date для обчислення різниці між сьогоднішньою датою і датою народження
+// // Напишіть функцію calculateAge(birthDate), яка приймає дату народження у форматі YYYY-MM-DD і повертає поточний вік.
+// // Підказка: Використайте об'єкт Date для обчислення різниці між сьогоднішньою датою і датою народження
 
-const calculateAge = birthDate => {
-  const userDate = new Date(birthDate);
+// const calculateAge = birthDate => {
+//   const userDate = new Date(birthDate);
 
-  const birthdayYear = userDate.getFullYear();
-  const birthdayMonth = userDate.getMonth();
-  const birthdayDay = userDate.getDate();
+//   const birthdayYear = userDate.getFullYear();
+//   const birthdayMonth = userDate.getMonth();
+//   const birthdayDay = userDate.getDate();
 
-  let diffYear = new Date().getFullYear() - birthdayYear;
+//   let diffYear = new Date().getFullYear() - birthdayYear;
 
-  const diffMouth = new Date().getMonth() - birthdayMonth;
+//   const diffMouth = new Date().getMonth() - birthdayMonth;
 
-  const diffDay = new Date().getDate() - birthdayDay;
+//   const diffDay = new Date().getDate() - birthdayDay;
 
-  if (diffMouth < 0 || (diffDay < 0 && diffMouth === 0)) {
-    diffYear -= 1;
-  }
+//   if (diffMouth < 0 || (diffDay < 0 && diffMouth === 0)) {
+//     diffYear -= 1;
+//   }
 
-  return diffYear;
-};
+//   return diffYear;
+// };
 
-console.log(calculateAge('2000-01-07'));
-console.log(calculateAge('2000-01-17'));
-console.log(calculateAge('2000-07-17'));
+// console.log(calculateAge('2000-01-07'));
+// console.log(calculateAge('2000-01-17'));
+// console.log(calculateAge('2000-07-17'));
+
+
+
